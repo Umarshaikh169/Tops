@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<!-- There are two methods get and post in form 
+	get:It is not secure and just shows 100character;
+	post:It is secured , and there is no limit and it hides the bar info . -->
+<form action="example.html" method="post">
+<table border="5" cellspacing="4" cellpadding="4">
+
+<tr>
+	<td>Email</td>
+	<td><input type="email" name="" ></td>
+</tr>
+<!-- niravpatel123@gamil.com -->
+<tr>
+	<td>Email</td>
+	<td><input type="text" required pattern="[a-z0-9]{1,}[@]{1}[a-z]{1,}[.]{1}[a-z]{1,}" title="must be in email format e.x: someone@gmail.com"></td>
+</tr>
+
+<tr>
+	<td>Password</td>
+	<td><input type="password" name="" required pattern="[a-zA-Z0-9!@#$%^&*]{3,7}" title="3 to 7 length"></td>
+</tr>
+
+<tr>
+	<td>Mobile</td>
+	<td><input type="text" name="" required pattern="[0-9]{10}" title="10 digits only"></td>
+</tr>
+
+<tr>
+	<td>Upload files</td>
+	<td><input type="file" multiple name=""></td>
+</tr>
+
+<tr>
+	<td>Quantity</td>
+	<td><input type="number" min="1" max="5" name=""></td>
+</tr>
+
+<tr>
+	<td>value</td>
+	<td><input type="text" value="200" name=""></td>
+</tr>
+
+<tr>
+	<td>placeholder</td>
+	<td><input type="text" placeholder="500" name=""></td>
+</tr>
+
+<tr><td><input type="submit" name="">
+<input type="reset" name=""></td></tr>
+</table>
+</form>
+</body>
+</html>
