@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		div
+		{
+			height: 300px;
+			width: 600px;
+			margin:220px auto;
+			background: url(images/elite.jpg);
+			background-size: 100% 100%;
+			font-size: 40px;
+			color: white;
+			text-align: center;
+			line-height: 300px;
+			position: relative;
+			z-index: 2;
+			overflow: hidden;
+
+		}
+		span
+		{
+			color: cyan;
+			font-weight: bold;
+		}
+
+		div::after
+		{
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 300px;
+			width: 600px;
+			background: rgba(42,44,45,0.2);
+			transform: translate(-100%,100%);
+			transition: 1s;
+			z-index: 0;
+		}
+		div::before
+		{
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 300px;
+			width: 600px;
+			background: rgba(42,44,45,0.2);
+			transform: translate(100%,-100%);
+			transition: 1s;
+			z-index: 0;
+		}
+
+		div:hover::after
+		{
+			transform: translate(0%,0%);
+		}
+		div:hover::before
+		{
+			transform: translate(0%,0%);
+		}
+
+	</style>
+</head>
+<body>
+
+<div>
+Flat <span>50%</span> offer
+</div>
+</body>
+</html>
