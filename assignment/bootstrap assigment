@@ -1,0 +1,83 @@
+ What are the advantages of Bootstrap?
+ The Benefits of Using Bootstrap Framework
+  Using the Bootstrap framework saves time in many ways by taking advantage of reusable code for Navbars, Dropdowns,       Labels,   Alerts, List groups and JavaScript plugins. Using the framework offers these design benefits:
+    Easy to prevent repetitions among multiple projects
+    Responsive design that can be used to adapt screen sizes and choose what shows and what doesn’t on any given device
+    Maintaining consistency among projects when using multiple developer teams
+    Quick design of prototypes
+    Cross-browser compatibility
+
+
+ What is a Bootstrap Container, and how does it work?
+Containers
+Containers are a fundamental building block of Bootstrap that contain, pad, and align your content within a given device or viewport.
+How they work
+Containers are the most basic layout element in Bootstrap and are required when using our default grid system. Containers are used to contain, pad, and (sometimes) center the content within them. While containers can be nested, most layouts do not require a nested container.
+Bootstrap comes with three different containers:
+    .container, which sets a max-width at each responsive breakpoint
+    .container-fluid, which is width: 100% at all breakpoints
+    .container-{breakpoint}, which is width: 100% until the specified breakpoint
+
+
+
+What are the default Bootstrap text settings?
+Bootstrap 4 uses a default font-size of 16px, and its line-height is 1.5.
+The default font-family is "Helvetica Neue", Helvetica, Arial, sans-serif.
+In addition, all <p> elements have margin-top: 0 and margin-bottom: 1rem (16px by default).
+
+
+What do you know about the Bootstrap Grid System?
+Grid system
+Use our powerful mobile-first flexbox grid to build layouts of all shapes and sizes thanks to a twelve column system, five default responsive tiers, Sass variables and mixins, and dozens of predefined classes.
+How it works
+Bootstrap’s grid system uses a series of containers, rows, and columns to layout and align content. It’s built with flexbox and is fully responsive. Below is an example and an in-depth look at how the grid comes together.
+
+
+
+What is the difference between Bootstrap 4 and Bootstrap 5
+Bootstrap is a free and open-source toolkit for developing responsive web pages and online apps. HTML, CSS, and the JavaScript framework make it simple to create responsive, mobile-first websites. Its primary goal is to address the cross-browser compatibility issue. Bootstrap is at the heart of any website optimized for all screen sizes and looks great in all modern browsers.
+Bootstrap 5 includes custom form controls. Bootstrap 4's form controls used whatever presets were available in each browser. The form controls in Bootstrap 5 will have a significantly more consistent appearance and feel across all browsers due to their custom design.
+
+What is a Button Group, and what is the class for a basic Button Group?
+Button Groups
+Bootstrap 4 allows you to group a series of buttons together (on a single line) in a button group:
+Use a <div> element with class .btn-group to create a button group.
+
+
+How can you use Bootstrap to make thumbnails?
+Bootstrap thumbnails
+To create thumbnails using Bootstrap − Add an <a> tag with the class of . thumbnail around an image. This adds four pixels of padding and a gray border. On hover, an animated glow outlines the image.
+
+
+In Bootstrap 4, what is flexbox?
+Bootstrap 4 Flex
+Use flex classes to control the layout of Bootstrap 4 components.
+To create a flexbox container and to transform direct children into flex items, use the d-flex class.
+Horizontal Direction
+Use .flex-row to display the flex items horizontally (side by side). This is default.
+Vertical Direction
+Use .flex-column to display the flex items vertically (on top of each other), or .flex-column-reverse to reverse the vertical direction
+Justify Content
+Use the .justify-content-* classes to change the alignment of flex items. Valid classes are start (default), end, center, between or around
+Fill / Equal Widths
+Use .flex-fill on flex items to force them into equal widths
+Wrap
+Control how flex items wrap in a flex container with .flex-nowrap (default), .flex-wrap or .flex-wrap-reverse.
+
+How can one create an alert in Bootstrap?
+Bootstrap 4 Alerts
+Bootstrap 4 provides an easy way to create predefined alert messages
+Alerts are created with the .alert class, followed by one of the contextual classes .alert-success, .alert-info, .alert-warning
+
+ What is a bootstrap card and how would you create one?
+Cards
+A card in Bootstrap 4 is a bordered box with some padding around its content. It includes options for headers, footers, content, colors, etc.
+Basic Card
+A basic card is created with the .card class, and content inside the card has a .card-body class.
+The .card-header class adds a heading to the card and the .card-footer class adds a footer to the card.
+Example
+<div class="card">
+  <div class="card-header">Header</div>
+  <div class="card-body">Content</div>
+  <div class="card-footer">Footer</div>
+</div>
