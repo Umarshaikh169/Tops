@@ -1,0 +1,58 @@
+• What are the new tags added in HTML5? 
+--> Some of the tags that are added in html5 is given below
+	1 :- article 
+	2 :- header 
+	3 :- footer
+	4 :- mark		
+	5 :- nav	
+	6 :- audio 	
+	7 :- video 	
+	8 :- embed
+
+
+• How to embed audio and video in a webpage? 
+--> Embed audio:-
+				To embed audio in HTML, we use the <audio> tag. Before HTML5, audio cannot be added to web pages in the Internet Explorer era. To play audio, we used web plugins like Flash. After the release of HTML5, it is possible.		
+
+				syntax is :-
+					<audio>
+    					<source src="file_name" type="audio_file_type">
+					</audio>
+-->Embed video:-
+				To embed video in HTML, we use the <video> tag. It contains one or more video sources at a time using <source> tag.
+
+				syntax is:-
+					<video>
+    					<source src="file_name" type="audio_file_type">
+					</video>
+
+
+
+• Semantic element in HTML5? 
+-->Semantic elements have meaningful names which tells about type of content. For example header, footer, table, … etc. HTML5 introduces many semantic elements as mentioned below which make the code easier to write and understand for the developer as well as instructs the browser on how to treat them. 
+-- Some of the semantic elements are ;
+	1 :- article 
+	2 :- header 
+	3 :- footer
+	4 :- mark		
+	5 :- nav
+
+• Canvas and SVG tags 
+-->	
+Canvas:-
+		A canvas is a rectangular area on an HTML page. By default, a canvas has no border and no content.
+-The <canvas> element is only a container for graphics. You must use JavaScript to actually draw the graphics.
+
+SVG:-
+		SVG stands for Scalable Vector Graphics.
+-The HTML <svg> element is a container for SVG graphics.
+-SVG has several methods for drawing paths, boxes, circles, text, and graphic images.
+
+
+
+		
+
+
+
+
+
