@@ -1,0 +1,100 @@
+1)What is JavaScript?
+ JavaScript is the Programming Language for the Web.
+ JavaScript can update and change both HTML and CSS.
+ JavaScript can calculate, manipulate and validate data.
+
+2)What is the use of is NaN function?
+ In JavaScript NaN is short for "Not-a-Number".
+ The isNaN() method returns true if a value is NaN.
+ The isNaN() method converts the value to a number before testing it.
+
+3)What is negative Infinity?
+ The negative infinity in JavaScript is a constant value that is used to represent a value that is the lowest available. This means that no other number is lesser than  this value. It can be generated using a self-made function or by an arithmetic operation.
+
+4)Which company developed JavaScript?
+ JavaScript was invented by Brendan Eich in 1995.
+ It was developed for Netscape 2, and became the ECMA-262 standard in 1997.
+
+5)What are undeclared and undefined variables?
+ Undefined: It occurs when a variable has been declared but has not been assigned any value. Undefined is not a keyword.
+ Undeclared: It occurs when we try to access any variable that is not initialized or declared earlier using the var or const keyword.
+
+6)Write the code for adding new elements dynamically?
+  document.createElement("<tagName>");  
+  Where <tagName> can be any HTML 
+  tagName like div, ul, button, etc.
+  newDiv element has been created
+  For Eg: let newDiv = document.createElement("div");
+
+7)What is the difference between ViewState and SessionState?
+ View state:Maintained at page level only.	
+ View state can only be visible from a single page and not multiple pages.	
+ Session state:Maintained at session level.
+ Session state value availability is across all pages available in a user session.
+
+8)What is === operator?
+ The strict equality ( === ) operator checks whether its two operands are equal, returning a Boolean result. Unlike the equality operator, the strict equality operator  always considers operands of different types to be different.
+
+9)How can the style/class of an element be changed?
+  The classList Property: The classList is a read-only property that returns the CSS class names of an element as a DOMTokenList object.  
+  Syntax:
+  document.getElementById("id").classList
+ The className Property: This property is used to set the current class of the element to the specified class.
+ Syntax:
+ document.getElementById("id").className = class
+
+10)How to read and write a file using JavaScript?
+  Write operation on a file
+ After the File System file is imported then, the writeFile() operation is called. The writeFile() method is used to write into the file in JavaScript. The syntax of  this method is as follows −
+
+ writeFile(path,inputData,callBackFunction)
+ 
+ Reading from the file
+ After the File System module is imported, the reading of the file in JavaScript can be done by using the readFile() function.
+
+ Syntax
+ The syntax to read from a file is as follows −
+
+ readFile(path, format, callBackFunc)
+
+11)What are all the looping structures in JavaScript?
+ JavaScript supports different kinds of loops:
+
+ for - loops through a block of code a number of times
+ for/in - loops through the properties of an object
+ for/of - loops through the values of an iterable object
+ while - loops through a block of code while a specified condition is true
+ do/while - also loops through a block of code while a specified condition is true
+
+12)How can you convert the string of any base to an integer in JavaScript?
+ The parseInt method parses a value as a string and returns the first integer.
+ Syntax
+ parseInt(string, radix)
+
+13) What is the function of the delete operator?
+  The delete operator removes a property from an object. If the property's value is an object and there are no more references to the object, the object held by that   property is eventually released automatically.
+
+14)What are all the types of Pop up boxes available in JavaScript?
+  JavaScript has three kind of popup boxes: Alert box, Confirm box, and Prompt box.
+  Alert Box 
+  window.alert() 
+  Confirm Box
+  window.confirm()
+  Prompt Box
+  window.prompt()
+
+15)What is the use of Void (0)?
+ JavaScript void 0 means returning undefined (void) as a primitive value. You might come across the term “JavaScript:void(0)” while going through HTML documents. 
+
+16)How can a page be forced to load another page in JavaScript?
+   We can use window.location property inside the script tag to forcefully load another page in Javascript. It is a reference to a Location object that is it    represents the current location of the document. We can change the URL of a window by accessing it.
+
+   Syntax:
+
+  <script>
+    window.location = <Path / URL>
+  </script>
+
+17) What are the disadvantages of using innerHTML in JavaScript?
+  It is very slow because as inner HTML already parses the content even we have to parse the content again so that's why it takes time. When we have used the event   handlers then the event handlers are not automatically attached to the new elements created by innerHTML.
+
