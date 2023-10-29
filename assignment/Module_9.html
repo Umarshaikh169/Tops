@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Modulo 9</title>
+</head>
+<body>
+
+<!-- Q1 What is Reactjs? -->
+<!-- A1 Reactjs is a javascript library used for building user interfaces or UI components for web applications.
+		React allows developers to create large web applications that can change data, without reloading the page.-->
+
+<!-- Q2 What is NPM in React Js? -->
+<!-- A2 NPM stands for Node Package Manager. It is a package manager for JavaScript programming language and is the default package manager for React Js.  In the context of React.js development, NPM is used to install packages, manage dependencies, and handle project configurations. -->
+
+<!-- Q3 What is role of Node js in react js? -->
+<!-- A3 React.js is a front-end library for building user interfaces, whereas Node.js is a back-end JavaScript runtime environment. Node.js can play several roles in a React.js application, especially when it comes to the development, deployment, and overall architecture of web applications.Some of the roles are:-
+		1. Server-Side Rendering (SSR)
+		2. API Integration 
+		3. Middleware and Routing
+		4. Real-Time Features
+		5. Deployment and Hosting -->
+
+<!-- Q4 What is CLI command In React Js? -->
+<!-- A4 CLI stand for Command line interface. CLI is a powerful tool that simplifies the process of creating, building, and managing React applications. The React CLI commands are executed in the terminal or command prompt and provide a streamlined way to perform various tasks during the development process. -->
+
+<!-- Q5 What is Components in React Js? -->
+<!-- A5 React js components are the fundamental building blocks used to create user interfaces. A component in React is a reusable, self-contained module that containe a specific piece of the UI and its behavior. Components can be thought of as custom HTML elements that developers can create to suit their application's needs. They allow you to break down the user interface into smaller, manageable pieces, making it easier to develop, test, and maintain complex web applications. -->
+
+<!-- Q6 What is Header and Content Component in Reactjs ? -->
+<!-- A6 
+		Header Component :- The Header component typically contains elements like the website logo, navigation menu, user profile information, and other elements that are meant to be displayed at the top of the web page. 
+
+		Content Component :- The Content component represents the main content area of the web page. It can vary significantly based on the specific application. The Content component might display blog posts, products, user data, or any other information that the application is designed to show.
+ -->
+
+
+ <!-- Q7 How to install React Js on Windows, Linux Operating System? How to Install NPM and How to check version of NPM?-->
+ <!-- A7 To install ReactJs in Windows Operating Systum :- 
+ 		 Step 1: Install Node.js installer for windows. Click on this link. Here install the LTS version (the one present on the left). Once downloaded open NodeJS without disturbing other settings, click on the Next button until it’s completely installed.
+ 		 Step 2: Open command prompt  to check whether it is completely installed or not type the command –> 
+ 		 		 	node -v
+ 		 If the installation went well it will give you the version you have installed  
+		 Step 3: Now in the terminal run the below command: 
+		 		 	npm install -g create-react-app  
+         It will globally install react app for you. To check everything  went well run the command
+         		 	create-react-app --version 
+         If everything went well it will give you the installed version of react app
+		 Step 4:Now Create a new folder where you want to make your react app using the below command: 
+		 		 	mkdir newfolder (enter foldername in place of newfolder)
+		 		Move inside the same folder using the below command:
+		 			cd newfolder (your folder name)
+		 Step 5: Now inside this folder run the command –>
+					create-react-app reactfirst (reactfirst is your app name)
+		 Step 6: Now open the IDE of your choice for eg.  Visual studio code and open the folder where you have installed the react app newfolder (in the above example)  inside the folder you will see your app’s name reactapp (In our example). Use the terminal and move inside your app name folder.Use command  cd reactapp (your app name)
+		 Step 7: To start your app run the below command :
+					npm start			
+		Once you run the above command a new tab will open in your browser showing React logo.That means you have created the first react app.	
+
+		To check the version of NPM you have installed, simply type the following command in your terminal or Command Prompt:
+						npm -v
+-->
+
+<!-- Q8 How to check version of React Js? -->
+<!-- A8  React version specified in your package.json file, which is the configuration file for your project. Look for the "react" entry under "dependencies" in your package.json file to find the installed React version.
+Here's an example of how it might look in the package.json file:
+		"dependencies": {
+	  	"react": "^17.0.2",
+  		// other dependencies
+		}
+  -->
+
+<!-- Q9 How to Create a List View in React Js? -->
+<!-- A9 Here's a basic example of how you can create a simple list view in Reactjs:
+				import './App.css';
+				import React from 'react';
+
+				const items = [
+				  { id: 1, name: "Umar" },
+				  { id: 2, name: "Aman" },
+				  { id: 3, name: "Aamena" }
+				];
+
+
+				function Listview({items}) {
+
+				  return (
+				    <ul>
+				        {items.map(item => (
+				            <li>{item.name}</li>
+				        ))}
+				    </ul>
+				  )
+				}
+
+				function App() {
+
+				  return (
+				    <div className="App">
+				      <h1>List View</h1>
+				      <Listview items={items}/>
+				     
+				    </div>
+				  );
+				}
+
+				export default App; -->
+
+
+<!-- Q10 Create Increment decrement state change by button click? -->
+<!-- A10 Here's the code for crating a basic counter on button click.
+
+				function App() {
+
+			    const [count, setCount] = useState(0);
+			  
+			    const increment = () => {
+			      setCount(count + 1);
+			    };
+			  
+			    const decrement = () => {
+			      setCount(count - 1);
+			    };  
+
+
+
+			  return (
+			    <div className="App">
+
+			      <div>
+			      <h2>Counter: {count}</h2>
+			      <button onClick={increment}>Increment</button>
+			      <button onClick={decrement}>Decrement</button>
+			      </div>
+
+			    </div>
+			 	);
+				} -->
+
+</body>
+</html>
