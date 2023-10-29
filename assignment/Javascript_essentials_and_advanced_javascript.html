@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Advanced Javascript</title>
+</head>
+<body>
+
+		<!-- Javascript Essentials -->
+
+<!-- Q1 :- Calculate subtotal price of Quantity in javascript. -->
+<!-- A1 :- -->
+	<label>Quantity:</label>
+    <input type="number" id="quantity" min="1" value="1">
+    <br><br>
+
+    <label>Price per unit:</label>
+    <input type="number" id="price" min="0.01" step="0.01" value="1.00">
+    <br><br>
+
+    <p>Subtotal: $<span id="subtotal">1.00</span></p>
+
+     <script>
+        // Getting quantity and price input elements
+        var quantityInput = document.getElementById("quantity");
+        var priceInput = document.getElementById("price");
+
+        // Add event listeners to the input fields
+        quantityInput.addEventListener("input", updateSubtotal);
+        priceInput.addEventListener("input", updateSubtotal);
+
+        // Function for update the subtotal based on quantity and price
+        function updateSubtotal() {
+            // Get the quantity and price values
+            var quantity = quantityInput.value;
+            var price = priceInput.value;
+
+            // Calculate the subtotal
+            var subtotal = quantity * price;
+
+            // Update the subtotal element with the calculated value
+            var subtotalElement = document.getElementById("subtotal");
+            subtotalElement.textContent = subtotal.toFixed(2);
+
+            // textcontent is method used to get or set html element textcontent.
+            // tofixed is a method convert number to a string.
+        }
+    </script>
+
+
+
+
+<!-- Q2 :- What is javascript Output Method? -->
+<!-- A2 :- A javascript output is a method where we can display a content into webpage and checking the code in the cosole. -->
+
+<!-- Q3 :- How to used javascript Output mehtod? -->
+<!-- A4 :- There are many ways to use javascript output method. someofthem are;  
+			1.console.log()(for debugging and development) 
+			2.alert() (for displaying alerts to users)	
+			3.document.write() (for writing directly to the HTML document)
+			4.innerHTML (for updating HTML elements)  -->
+
+<!-- Q4 :- How to used JavaScript Events to do all examples? -->
+<!-- A4 :-  
+
+		1. Using Event Listener for console.log() -->
+		<hr><hr>
+
+		<button id="consoleButton">Click me to log to console</button>
+
+			<script>
+  			document.getElementById("consoleButton").addEventListener("click", function() {
+    		console.log("Hello, World!");
+  			});
+			</script>
+
+		<!-- 2. Using Event Listener for alert() -->
+
+		<button id="alertButton">Click me to show alert</button>
+
+			<script>
+  			document.getElementById("alertButton").addEventListener("click", function() {
+    		alert("Hello, World!");
+  			});
+			</script>
+
+		<!-- 3. Using Event Listener for document.write() -->
+		<!-- it is not recommended bcoz it cleans the whole output and then gives you current output . it is better to use innerhtml  -->
+
+		<button id="writeButton">Click me to write to document</button>
+
+			<script>
+  			document.getElementById("writeButton").addEventListener("click", function() {
+    		document.write("Hello, World!");
+  			});
+			</script>
+
+		<!-- 4. Using Event Listener for innerHTML -->
+
+		<button id="htmlButton">Click me to update HTML</button>
+		<div id="output"></div>
+
+			<script>
+  			document.getElementById("htmlButton").addEventListener("click", function() {
+    		document.getElementById("output").innerHTML = "Hello, World!";
+  			});
+			</script>
+
+
+
+
+
+					<!-- Advance javascript -->
+
+<!-- Q1  Write a program to Show an alert. -->
+<!-- A1 -->
+		<!-- <script>
+    	window.alert("This is an alert message!");
+		</script> -->
+
+
+<!-- Q2 What will be the result for these expressions?
+1. 5 > 4
+2. "apple" > "pineapple"
+3. "2" > "12"
+4. undefined == null
+5. undefined === null
+6. null == "\n0\n"
+7. 7. null === +"\n0\n" -->
+<!-- A2 -->
+		<!-- 
+		=> 5 > 4: This expression is true because 5 is greater than 4.
+		=> "apple" > "pinapple" : This expression is false because when comparing strings, JavaScript compares their character codes. In this case, the first characters "a" in "apple" and "p" in "pineapple" are compared, and "p" has a greater character code than "a".
+		=> "2" > "12" : This expression is true because when comparing strings, JavaScript compares character by character. In this case, the comparison starts with "2" and "1". Since "2" is greater than "1", the expression is true.
+		=> undefined == null: This expression is true in JavaScript because undefined and null are loosely equal.
+		=> undefined === null: This expression is false because === is the strict equality operator in JavaScript, which checks both value and type. undefined and null have different types, so they are not strictly equal.
+		=> null == "\n0\n": This expression is false because null is not equal to the string "\n0\n". The == operator does not perform type coercion here because one operand is null.
+		=> null === +"\n0\n": This expression is true. +"\n0\n" converts the string "\n0\n" to a number, which results in 0. Then, the strict equality comparison (===) between null and 0 is true because they have the same value and type.
+ -->
+
+<!-- Q3 Will alert be shown? if ("0") { alert( 'Hello'); -->
+<!-- A3 Yes, the alert will be shown. In JavaScript, when a non-empty string is used in a conditional context (such as an if statement), it is considered truthy. Therefore, the condition "0" evaluates to true, and the alert('Hello') statement will be executed, displaying the alert with the message "Hello". -->
+<!-- 
+				<script type="text/javascript">
+					if ("0") {alert("Hello")}
+				</script> -->
+
+
+<!-- Q4 What is the code below going to output? alert( null || 2 || undefined ); -->
+<!-- A4 The code alert( null || 2 || undefined ) will output 2.
+
+In JavaScript, the || (logical OR) operator returns the first truthy operand it encounters, or the last operand if none of them are truthy. In this case:
+
+null is falsy.
+2 is truthy, so the || operator stops evaluating and returns 2.
+undefined is not reached because 2 is truthy and already satisfies the condition.
+Therefore, 2 will be the output of the alert statement. -->
+				<!-- <script type="text/javascript">
+				alert( null || 2 || undefined )	
+				</script> -->
+
+
+
+<!-- Q5 Replace Function Expressions with arrow functions in the code below:
+Function ask(question, yes, no)
+{ if (confirm(question))yes();
+else
+no();
+}
+ask("Do you agree?", function()
+{ alert("You agreed."); },
+function() {
+alert("You canceled the execution."); }
+}
+ -->
+
+<!-- A5 All the function expression are replaced with arrow function given code. 
+ <script type="text/javascript">
+	let ask = (question, yes, no) => {
+    if (confirm(question)) {
+        yes();
+    } else {
+        no();
+    }
+	};
+
+	ask("Do you agree?", 
+    () => {
+        alert("You agreed.");
+    },
+    () => {
+        alert("You canceled the execution.");
+    }
+	);
+</script> -->
+
+
+			
+
+
+
+</body>
+</html>
