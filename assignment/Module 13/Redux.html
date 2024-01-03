@@ -1,0 +1,28 @@
+<!-- Q1 What is Redux -->
+<!-- A1  It's a state management tool that helps manage the application's state in a predictable way,
+     making it easier to develop and maintain complex applications. -->
+
+<!-- Q2 What is Redux Thunk used for?-->
+<!-- A2 Redux Thunk is a middleware for Redux that enables handling asynchronous logic within 
+    Redux actions.  -->
+
+<!-- Q3 What is Pure Component? When to use Pure Component over Component?  -->
+<!-- A4  It performs a shallow comparison of the current props and state with the next props and state.
+     If there are no differences, the component will not re-render. React.memo for functional components 
+     offers similar optimization by memoizing the component based on its props.
+    
+    When to use:-
+    Performance Optimization: Use Pure Components when you need to optimize performance by preventing 
+    unnecessary renders.
+    Avoiding Unnecessary Updates: In scenarios where you know that the component doesn’t need to update 
+    on every parent render, Pure Components can be a good choice to prevent unnecessary updates and optimize rendering.
+    Simple State and Props: If a component's props and state are simple and can be shallowly compared for changes, using a
+    Pure Component can be beneficial. However, if the props or state are complex objects or arrays, shallow comparison might not be sufficient.
+-->
+
+<!-- Q4 What is the second argument that can optionally be passed tosetState and what is its purpose?  -->
+<!-- A4 In React, the setState function can take a second argument, which is an optional callback function. This callback is executed after the 
+    setState has been completed and the component has been re-rendered.
+    
+    The purpose of this callback is to perform actions that rely on the updated state or need to be executed after the state has been updated 
+    and the component has re-rendered. It's commonly used to handle logic that should occur after the state update is complete. -->
